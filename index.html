@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="app" class="app">
+        <div class="app__item header">
+            <div class="header__gify">
+                Current Gif Tag: {{ gifySearchTag }}
+            </div>
+            <div class="header__count">
+                Traffic Count: {{ count }}
+            </div>
+        </div>
+        <div class="app__item image-wrapper">
+            <img :src="imageUrl" />
+            <a :href="imageUrl" target="_blank">{{ imageUrl }}</a>
+        </div>
+        <div class="app__item options">
+            <input class="option__search" type="text" v-on:keyup.enter="checkEnter" placeholder="search gify">
+            <button class="option__btn" v-on:click="resetCounter"><span>Reset</span></button>
+        </div>
+    </div>
+    <script type="text/javascript" src="/main.js"></script>
+</body>
+</html>
