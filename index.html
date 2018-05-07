@@ -6,6 +6,7 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
     <link rel="stylesheet" href="/style.css">
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
@@ -23,11 +24,11 @@
         </div>
         <div class="app__item image-wrapper">
             <img :src="imageUrl" />
-            <a :href="imageUrl" target="_blank">{{ imageUrl }}</a>
+            <a :href="imageUrl" class="image-wrapper__url" target="_blank">{{ imageUrl }}</a>
         </div>
         <div class="app__item options">
             <input class="option__search" type="text" v-on:keyup.enter="checkEnter" placeholder="search gify">
-            <button class="option__btn" v-on:click="resetCounter"><span>Reset</span></button>
+            <button class="option__btn" v-on:click="resetCounter"><span>Reset Counter</span></button>
         </div>
     </div>
     <script type="text/javascript" src="/main.js"></script>
